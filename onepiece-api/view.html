@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/BBk0DRG/1pc1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .container-detail {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            color: #333;
+        }
+        .container-detail img {
+            border-radius: 15px;
+        }
+        .back-btn {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <button class="btn btn-secondary back-btn" onclick="window.history.back()">Back</button>
+    <div id="characterDetails" class="container-detail"></div>
+</div>
+
+<script>
+  
+    const urlParams = new URLSearchParams(window.location.search);
+    const characterId = urlParams.get('id');
+
+    async function fetchCharacterDetails() {
+        const response = await fetch(`https://api.jikan.moe/v4/characters/${characterId}`);
+        const character = await response.json();
+
+        const characterDetails = document.getElementById('characterDetails');
+        characterDetails.innerHTML = `
+            <h2 class="text-center">${character.data.name}</h2>
+            <div class="text-center mb-4">
+                <img src="${character.data.images.jpg.image_url}" class="img-fluid" alt="${character.data.name}" style="max-width: 300px;">
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Kanji:</strong> ${character.data.name_kanji || "Unknown"}</li>
+                <li class="list-group-item"><strong>Nicknames:</strong> ${character.data.nicknames.join(', ') || "None"}</li>
+                <li class="list-group-item"><strong>About:</strong> ${character.data.about || "No information available."}</li>
+            </ul>
+        `;
+    }
+
+    fetchCharacterDetails();
+</script>
+
+</body>
+</html>
