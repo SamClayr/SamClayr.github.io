@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
-
     
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-
     
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -29,7 +27,7 @@
             padding: 40px 20px;
         }
 
-       
+        
         .profile-card {
             background: linear-gradient(135deg, #ff758c, #ff7eb3);
             color: #fff;
@@ -60,7 +58,30 @@
             font-size: 1rem;
         }
 
-       
+        .github-btn {
+            margin-top: 15px;
+            display: inline-block;
+            background-color: #FFDDE2;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid black; 
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .github-btn:hover {
+            background-color: #444d56;
+        }
+
+        .email-info {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* "My Projects" Title */
         .work-title {
             font-size: 3.5rem;
             font-weight: bold;
@@ -87,7 +108,6 @@
             opacity: 0.9; 
         }
 
-        
         .activity-card:nth-child(1) {
             background-color: #FFF5E1; 
         }
@@ -124,7 +144,6 @@
             border-radius: 5px;
         }
 
-        /* Baby Pink Buttons */
         .activity-btn {
             background-color: #FFDDE2; 
             color: black;
@@ -155,15 +174,17 @@
 <body>
 
     <div class="container" id="home">
-       
+        <!-- Profile Section -->
         <div class="profile-card">
             <img src="https://i.ibb.co/DKDRqcK/IMG-2602.jpg" alt="Profile Picture">
             <h1>Samantha Claire V. Llarena</h1>
             <p>BSIT 4-1 | SAM</p>
             <p><i class="fas fa-map-marker-alt"></i> PUP STB</p>
+            <p class="email-info"><i class="fas fa-envelope"></i> <a href="mailto:scvllarena@gmail.com" style="color: #fff; text-decoration: underline;">scvllarena@gmail.com</a></p>
+            <a href="https://github.com/SamClayr/SamClayr.github.io" class="github-btn">Visit My GitHub Profile</a>
         </div>
 
-        
+        <!-- Projects Section -->
         <h2 class="work-title" id="projects">My Projects</h2>
         <div class="row">
             <div class="activity-card">
