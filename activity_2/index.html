@@ -6,78 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Explore Vietnam - Affordable Travel</title>
-    
+
+    <link rel="icon" href="https://i.ibb.co/6ByM9TT/travelicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
   
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-       
         body, h1, p {
-            font-family: 'Noto Serif', sans-serif;
+        font-family: 'Noto Serif', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .hero {
-            position: relative;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg1.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .overlay {
-            position: relative;
-            z-index: 2;
-        }
+        position: relative;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg1.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+}
 
         .hero h1 {
             font-size: 8rem;
             font-weight: bold;
+            margin-bottom: 1rem;
         }
 
         .hero p {
             font-size: 3.5rem;
+            margin-top: 1rem;
         }
 
-        .section {
-            padding: 4rem 0;
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .hero p {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                font-size: 1.5rem;
+            }
         }
 
        
-        .section p {
-            font-size: 1.25rem;
-            line-height: 1.8;
+        .hero .btn {
+            padding: 16px 32px;
+            font-size: 1.5rem;
+            border-radius: 50px; 
+            background: linear-gradient(45deg, #ff7e5f, #feb47b); 
+            color: white;
+            border: none;
+            transition: all 0.3s ease-in-out; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
         }
 
-        /* Footer */
+        .hero .btn:hover {
+            background: linear-gradient(45deg, #feb47b, #ff7e5f); 
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+        }
+
+        .hero .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.5); 
+        }
+
+        
+        .card .btn {
+            padding: 10px 15px;
+            font-size: 1.1rem;
+            border-radius: 50px; 
+            background: linear-gradient(45deg, #ff7e5f, #feb47b); 
+            color: white;
+            border: none;
+            transition: all 0.3s ease-in-out; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+            text-transform: capitalize; 
+            letter-spacing: 1px; 
+            margin-top: 10px; 
+        }
+
+        .card .btn:hover {
+            background: linear-gradient(45deg, #feb47b, #ff7e5f); 
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+        }
+
+        .card {
+            transition: all 0.3s ease-in-out; 
+            border-radius: 15px; 
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+        }
+
+        .card img {
+            transition: transform 0.3s ease; 
+        }
+
+        .card:hover img {
+            transform: scale(1.1); 
+        }
+
+        
+        .section {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; 
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+       
         .footer {
             background-color: #343a40;
             color: white;
             text-align: center;
             padding: 1rem 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .footer a {
             color: #f8f9fa;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .card {
-            transition: box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
 
@@ -137,7 +224,7 @@
                     <div class="card m-3">
                         <img src="https://i.ibb.co/QPpYD5Z/hochimin1.png" class="card-img-top" alt="Ho Chi Minh City">
                         <div class="card-body">
-                            <h5 class="card-title">~Ho Chi Minh City~</h5>
+                            <h5 class="card-title"><strong>~Ho Chi Minh City~</strong></h5>
                             <p class="card-text">Experience the vibrant culture and rich history of Vietnam's largest city.</p>
                             <a href="#hochimin-section" class="btn btn-primary">See more!</a>
                         </div>
@@ -147,7 +234,7 @@
                     <div class="card m-3">
                         <img src="https://i.ibb.co/8cZGJjs/hanoi1.png" class="card-img-top" alt="Hanoi">
                         <div class="card-body">
-                            <h5 class="card-title">~Hanoi~</h5>
+                            <h5 class="card-title"><strong>~Hanoi~</strong></h5>
                             <p class="card-text">Explore the historical capital of Vietnam, known for its centuries-old architecture and rich culture.</p>
                             <a href="#hanoi-section" class="btn btn-primary">See more!</a>
                         </div>
@@ -157,7 +244,7 @@
                     <div class="card m-3">
                         <img src="https://i.ibb.co/XtCPHyf/danang1.png" class="card-img-top" alt="Da Nang">
                         <div class="card-body">
-                            <h5 class="card-title">~Da Nang~</h5>
+                            <h5 class="card-title"><strong>~Da Nang~</strong></h5>
                             <p class="card-text">Famous for its golden Hand Bridge,experience breathtaking views!</p>
                             <a href="#danang-section" class="btn btn-primary">See more!</a>
                         </div>
@@ -167,7 +254,7 @@
                     <div class="card m-3">
                         <img src="https://i.ibb.co/G5PcSLw/Sapa1.png" class="card-img-top" alt="Sapa">
                         <div class="card-body">
-                            <h5 class="card-title">~Sapa~</h5>
+                            <h5 class="card-title"><strong>~Sapa~</strong>></h5>
                             <p class="card-text">Nestled in the mountains of northern Vietnam, Sapa offers breathtaking terraced landscapes.</p>
                             <a href="#sapa-section" class="btn btn-primary">See more!</a>
                         </div>
@@ -184,8 +271,8 @@
                 <div class="col-md-6">
                     <img src="https://i.ibb.co/QPpYD5Z/hochimin1.png" class="img-fluid" alt="Ho Chi Minh City">
                 </div>
-                <div class="col-md-6 text-center">
-                    <h2 class="text-center">Ho Chi Minh City</h2>
+                <div class="col-md-6 text-center"><br>
+                    <h2 class="text-center"><strong>Ho Chi Minh City</strong></h2><br><br>
                     <p>Ho Chi Minh City, formerly known as Saigon, is a vibrant blend of old and new. The city is filled with bustling street markets, 
                         French colonial landmarks, and modern skyscrapers. Visit Ben Thanh Market for affordable shopping, 
                         and don’t miss the War Remnants Museum to understand Vietnam’s history. As the commercial hub of Vietnam,
@@ -198,11 +285,11 @@
     <section id="hanoi-section" class="section bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6"><br>
                     <img src="https://i.ibb.co/8cZGJjs/hanoi1.png" class="img-fluid" alt="Hanoi">
                 </div>
-                <div class="col-md-6 text-center">
-                    <h2 class="text-center">Hanoi</h2>
+                <div class="col-md-6 text-center"><br>
+                    <h2 class="text-center"><strong>Hanoi</strong></h2><br><br>
                     <p>Hanoi, the capital of Vietnam, is known for its ancient temples, bustling old quarter, and delicious street food.
                          Explore the Hoan Kiem Lake, the Temple of Literature, and the Old Quarter, all offering a glimpse into the rich history of the country. 
                          Hanoi is an ideal destination for budget travelers, with its affordable accommodation and street eats.</p>
@@ -217,8 +304,8 @@
                 <div class="col-md-6">
                     <img src="https://i.ibb.co/XtCPHyf/danang1.png" class="img-fluid" alt="Da Nang">
                 </div>
-                <div class="col-md-6 text-center">
-                    <h2 class="text-center">Da Nang - Home of the Golden Hand Bridge</h2>
+                <div class="col-md-6 text-center"><br>
+                    <h2 class="text-center"><strong>Da Nang - Home of the Golden Hand Bridge</strong></h2><br><br>
                     <p>Da Nang is a coastal city known for its stunning beaches and world-famous Golden Hand Bridge. 
                         Situated in the Ba Na Hills, the bridge gives you the sensation of walking among the clouds.
                          This Instagram-worthy spot is a must-see for travelers. Da Nang is not only about luxury; 
@@ -234,14 +321,24 @@
                 <div class="col-md-6">
                     <img src="https://i.ibb.co/G5PcSLw/Sapa1.png" class="img-fluid" alt="Sapa">
                 </div>
-                <div class="col-md-6 text-center">
-                    <h2 class="text-center">Sapa</h2>
+                <div class="col-md-6 text-center"><br>
+                    <h2 class="text-center"><strong>Sapa</strong></h2><br><br>
                     <p>Sapa is famous for its rice terraces and trekking routes that lead through the mountains of northern Vietnam. 
                         Ideal for adventure seekers, Sapa offers both budget and luxury options for every traveler. 
                         Take a trek through the local villages, and experience the authentic culture of the ethnic minorities living in the region.</p>
                 </div>
             </div>
         </div>
+        <section id="map-section" class="section">
+            <div class="container">
+                <h2 class="text-center">Explore Vietnam on the Map</h2><br>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.156242152664!2d106.62966001358765!3d10.823098042114706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528759beee7f7%3A0x16b99fc1aee66088!2zQ2hpbmhhIFRoYSBBY2hlcmlh!5e0!3m2!1sen!2sph!4v1638474364787"
+                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
     </section>
 
     

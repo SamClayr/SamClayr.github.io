@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moana 2: The Journey Continues</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #002F47, #004F6E); 
+            color: white;
+        }
+        .banner-container {
+        margin: 0; 
+        padding: 0; 
+        overflow: hidden; 
+    }
+        .banner-image {
+        display: block; 
+        width: 100%; 
+        height: auto; 
+    }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, #002F47, #004F6E); 
+        }
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .character-section {
+            background: linear-gradient(180deg, #004F6E, #007EA8); 
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .character-section h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .character-card img {
+                width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .character-card {
+            background-color: #fff;
+            color: #002F47;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+    }
+         .character-card:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+        .row > .col-md-4 {
+        margin-bottom: 20px; 
+        }
+        
+        .cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cta a {
+            text-decoration: none;
+            color: white;
+            background: #FF5733;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(180deg, #002F47, #004F6E); 
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   
+    <section class="hero">
+        <div class="banner-container">
+            <img src="https://i.ibb.co/G5bqD6q/moana2banner.png" alt="Moana 2 Banner" class="img-fluid banner-image">
+        </div><br><br>
+        <p>Set sail on an all-new adventure! Moana 2 is coming to theaters on <strong>November 27</strong>. Watch the trailer now!</p>
+        <div class="video-container">
+            <iframe 
+                width="100%" 
+                height="500" 
+                src="https://www.youtube.com/embed/hDZ7y8RP5HE?autoplay=1&mute=1" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+   
+    <section class="character-section">
+        <h2>Meet the Cast</h2>
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-4">
+                    <div class="card character-card">
+                        <img src="https://i.ibb.co/p3SxVS2/moana1.png" alt="Moana">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Moana</h5>
+                            <p class="card-text">Brave and determined, Moana is ready for her next great journey.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card character-card">
+                        <img src="https://i.ibb.co/KVB58vG/maui.png" alt="Maui">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Maui</h5>
+                            <p class="card-text">The mighty demigod returns with his larger-than-life personality.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4">
+                    <div class="card character-card">
+                        <img src="https://i.ibb.co/kDsX715/moana2.png" alt="New Character">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">New Friend</h5>
+                            <p class="card-text">A mysterious new ally joins Moana on her adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="cta">
+        <a href="#">Get Your Tickets Now!</a>
+    </div>
+
+   
+    <footer>
+        <p>© 2024 Disney. All rights reserved. | Follow us: #Moana2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
